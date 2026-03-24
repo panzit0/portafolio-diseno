@@ -1,29 +1,44 @@
-/* Configuración para Diseñadores Gráficos */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Un gris claro de fondo */
-    color: #333; /* Texto gris oscuro para mejor lectura */
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-}
-
+/* Encabezado con degradado */
 header {
-    background-color: #2c3e50; /* Un color elegante */
-    color: white;
-    padding: 20px;
-    text-align: center;
+ background: linear-gradient(135deg, var(--azul-inem), var(--rojo-inem));
+ color: var(--blanco);
+ padding: 3rem 1rem;
+ text-align: center;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
+header h1 {
+ margin: 0;
+ font-size: 2.5rem;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+}
+/* Estilo de la Foto de Perfil */
 img {
-    border-radius: 50%; /* Hace que la foto de perfil sea circular */
-    border: 5px solid #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+ display: block;
+ margin: 20px auto;
+ width: 180px;
+ height: 180px;
+ object-fit: cover;
+ border-radius: 50%; /* Foto Circular */
+ border: 5px solid var(--blanco);
+ box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+ transition: transform 0.3s ease;
 }
-
-section {
-    background: white;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
+img:hover {
+ transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+/* Contenedor principal */
+main {
+ max-width: 800px;
+ margin: -30px auto 40px auto; /* Sube un poco para entrar en el header */
+ background: var(--blanco);
+ padding: 40px;
+ border-radius: 15px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+h2 {
+ color: var(--azul-inem);
+ border-bottom: 2px solid var(--rojo-inem);
+ padding-bottom: 5px;
+ display: inline-block;
 }
