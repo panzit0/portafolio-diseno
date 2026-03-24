@@ -8,12 +8,12 @@ body {
     padding: 20px;
 }
 
-header {   <h1>- Aislin Aleshka Rodriguez -</h1>
-        <p>Diseñador Gráfico en Formación</p>
+header {
     background-color: #2c3e50; /* Un color elegante */
     color: white;
     padding: 20px;
-    text-align: center;}
+    text-align: center;
+}
 
 img {
     border-radius: 50%; /* Hace que la foto de perfil sea circular */
