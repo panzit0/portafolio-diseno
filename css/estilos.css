@@ -45,7 +45,7 @@ h2 {
 
 /* Estilos para el Formulario */
 #contacto {
-    background-color: # FF91B1;
+    background-color: var(--blanco);
     padding: 40px;
     border-radius: 15px;
     margin-top: 20px;
@@ -78,7 +78,7 @@ h2 {
 
 .boton-enviar {
     background-color: var(--rojo-inem);
-    color: white;
+    color:  #FF91B1;
     padding: 15px;
     border: none;
     border-radius: 8px;
