@@ -74,7 +74,7 @@ h2 {
 .enlaces {
     list-style: none;
     display: flex;
-    gap: 30px; /* Espacio entre botones */
+    gap: 60px; /* Espacio entre botones */
     margin: 0;
 }
 
