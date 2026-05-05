@@ -133,7 +133,7 @@ h2 {
     transition: 0.3s;
 
 
- /* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
+/* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
 
 #productos {
     padding: 60px 20px;
@@ -199,17 +199,4 @@ h2 {
 
 .boton-anadir:hover {
     background-color: #1e8449;
-}
-}
-
-.enlaces a:hover {
-    color: #ff0000; /* Rojo cuando pasas el mouse */
-}
-
-/* Botón del Carrito resaltado */
-.boton-carrito {
-    background-color: #FF7A9E; /* PINKI*/
-    padding: 8px 18px;
-    border-radius: 25px;
-    border: 2px solid #ffffff;
 }
