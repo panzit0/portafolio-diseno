@@ -1,106 +1,34 @@
-/* Encabezado con degradado */
-header {
- background: linear-gradient(135deg, var(--azul-inem), var(--rojo-inem));
- color: var(--blanco);
- padding: 3rem 1rem;
- text-align: center;
- box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-header h1 {
- margin: 0;
- font-size: 2.5rem;
- text-transform: uppercase;
- letter-spacing: 2px;
-}
-/* Estilo de la Foto de Perfil */
-img {
- display: block;
- margin: 20px auto;
- width: 180px;
- height: 180px;
- object-fit: cover;
- border-radius: 50%; /* Foto Circular */
- border: 5px solid var(--blanco);
- box-shadow: 0 8px 15px rgba(0,0,0,0.2);
- transition: transform 0.3s ease;
-}
-img:hover {
- transform: scale(1.05); /* Efecto al pasar el mouse */
-}
-/* Contenedor principal */
-main {
- max-width: 800px;
- margin: -30px auto 40px auto; /* Sube un poco para entrar en el header */
- background: var(--blanco);
- padding: 40px;
- border-radius: 15px;
- box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-h2 {
- color: var(--azul-inem);
- border-bottom: 2px solid var(--rojo-inem);
- padding-bottom: 5px;
- display: inline-block;
+/* VARIABLES DE COLOR (Estilo Oscuro + Rosado Alternativo) */
+:root {
+    --fondo-oscuro: #121212;
+    --fondo-tarjeta: #1e1e1e;
+    --texto-principal: #ffffff;
+    --texto-secundario: #b3b3b3;
+    --rosa-principal: #FFB8CA;
+    --rosa-oscuro: #ff8fa9;
+    --borde-color: #333333;
 }
 
-/* Estilos para el Formulario */
-#contacto {
-    background-color: var(--blanco);
-    padding: 40px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espacio entre los campos */
-}
-
-.grupo-entrada {
-    display: flex;
-    flex-direction: column;
-}
-
-.grupo-entrada label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--azul-inem);
-}
-
-.grupo-entrada input, 
-.grupo-entrada textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.boton-enviar {
-    background-color: var(--rojo-inem);
-    color:  #FF91B1;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.boton-enviar:hover {
-    background-color: var(--azul-inem);
+/* Configuración General del Cuerpo (Fondo Negro y Letras Blancas) */
+body {
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-principal);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Menú Superior */
 .menu-superior {
-    background-color: #FFB8CA; /* rosita pq k lindo */
+    background-color: var(--rosa-principal); 
     padding: 15px 0;
     position: sticky; 
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para que resalte sobre el fondo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     width: 100%;
-    border-bottom: 5px solid #000000
+    border-bottom: 5px solid #000000;
 }
 
 .contenedor-menu {
@@ -113,7 +41,7 @@ h2 {
 }
 
 .logo {
-    color: #ffffff; /* Blanco */
+    color: #000000; /* Negro para contrastar con el fondo rosa */
     font-weight: bold;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -122,56 +50,134 @@ h2 {
 .enlaces {
     list-style: none;
     display: flex;
-    gap: 70px; /* Espacio entre botones */
+    gap: 30px; 
     margin: 0;
+    padding: 0;
 }
 
 .enlaces a {
-    color: #ffffff; /* Texto Blanco siempre visible */
+    color: #000000; /* Negro para que se lea bien sobre el rosa */
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+}
 
+.enlaces a:hover {
+    color: #ffffff;
+}
 
-/* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #1f1f1f, #000000);
+    color: var(--texto-principal);
+    padding: 4rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--borde-color);
+}
 
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: var(--rosa-principal);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Contenedor Perfil (Sobre Mí) */
+main {
+    max-width: 800px;
+    margin: 40px auto; 
+    background: var(--fondo-tarjeta);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid var(--borde-color);
+}
+
+main h2 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: normal;
+    border: none;
+}
+
+main p {
+    color: var(--texto-secundario);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Estilo de la Foto de Perfil */
+img {
+    display: block;
+    margin: 30px auto;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 4px solid var(--rosa-principal);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); 
+}
+
+/* Títulos de sección generales */
+h2 {
+    color: var(--rosa-principal);
+    padding-bottom: 5px;
+}
+
+/* --- VITRINA DE PRODUCTOS / SERVICIOS --- */
 #productos {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Gris muy suave para resaltar las tarjetas blancas */
+    background-color: #161616; /* Un gris casi negro para separar la sección */
 }
 
 .titulo-seccion {
     text-align: center;
-    color: #2c3e50;
+    color: var(--texto-principal);
+    font-size: 2rem;
     margin-bottom: 40px;
 }
 
 .contenedor-productos {
     display: flex;
-    flex-wrap: wrap;    /* Permite que los productos bajen en el celular */
-    gap: 30px;          /* Espacio entre tarjetas */
+    flex-wrap: wrap;    
+    gap: 30px;          
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .tarjeta {
-    background-color: #ffffff;
+    background-color: var(--fondo-tarjeta);
     border-radius: 15px;
-    overflow: hidden;   /* Para que la imagen no se salga de las esquinas redondeadas */
+    overflow: hidden;   
     width: 280px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     transition: transform 0.3s;
+    border: 1px solid var(--borde-color);
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px); /* Efecto visual al pasar el mouse */
+    transform: translateY(-10px); 
 }
 
 .tarjeta img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Recorta la imagen para que todas midan lo mismo */
+    object-fit: cover; 
+    border-radius: 0; /* Quita el redondeado de avatar para las fotos de productos */
+    border: none;
 }
 
 .info-tarjeta {
@@ -179,24 +185,101 @@ h2 {
     text-align: center;
 }
 
+.info-tarjeta h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.info-tarjeta p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
 .precio {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #d32f2f; /* Rojo para el precio */
+    color: var(--rosa-principal); /* Rosa para resaltar el precio en modo oscuro */
     margin: 15px 0;
 }
 
 .boton-anadir {
-    background-color: #27ae60; /* Verde "Comprar" */
-    color: white;
+    background-color: var(--rosa-principal); 
+    color: #000000; 
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
     width: 100%;
+    transition: 0.3s;
 }
 
 .boton-anadir:hover {
-    background-color: #1e8449;
+    background-color: var(--rosa-oscuro);
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+#contacto {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: var(--fondo-tarjeta);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--borde-color);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.grupo-entrada {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-entrada label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--rosa-principal);
+}
+
+.grupo-entrada input, 
+.grupo-entrada textarea {
+    padding: 12px;
+    background-color: var(--fondo-oscuro);
+    border: 1px solid var(--borde-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.grupo-entrada input:focus, 
+.grupo-entrada textarea:focus {
+    outline: 1px solid var(--rosa-principal);
+}
+
+.boton-enviar {
+    background-color: var(--rosa-principal);
+    color: #000000;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--rosa-oscuro);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--borde-color);
 }
