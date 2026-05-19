@@ -92,7 +92,6 @@ h2 {
 }
 
 /* Menú Superior */
-/* Menú Superior */
 .menu-superior {
     background-color: #FFB8CA; /* rosita pq k lindo */
     padding: 15px 0;
@@ -105,21 +104,33 @@ h2 {
 }
 
 .contenedor-menu {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #ffffff; /* Blanco */
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .enlaces {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 70px; /* Espacio entre botones */
+    margin: 0;
 }
 
 .enlaces a {
-    color: white;
+    color: #ffffff; /* Texto Blanco siempre visible */
     text-decoration: none;
-}
+    font-weight: bold;
+    transition: 0.3s;
 
 /* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
 
@@ -188,3 +199,7 @@ h2 {
 .boton-anadir:hover {
     background-color: #1e8449;
 }
+
+
+
+
