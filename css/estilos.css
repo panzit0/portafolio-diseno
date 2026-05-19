@@ -132,34 +132,12 @@ h2 {
     font-weight: bold;
     transition: 0.3s;
 
- .menu-superior {
-    background-color: #2c3e50;
-    padding: 15px 0;
-    color: white;
-}
-
-.contenedor-menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.enlaces {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.enlaces a {
-    color: white;
-    text-decoration: none;
-}
 
 /* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
 
 #productos {
     padding: 60px 20px;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Gris muy suave para resaltar las tarjetas blancas */
 }
 
 .titulo-seccion {
@@ -170,8 +148,8 @@ h2 {
 
 .contenedor-productos {
     display: flex;
-    flex-wrap: wrap;    
-    gap: 30px;          
+    flex-wrap: wrap;    /* Permite que los productos bajen en el celular */
+    gap: 30px;          /* Espacio entre tarjetas */
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -180,20 +158,20 @@ h2 {
 .tarjeta {
     background-color: #ffffff;
     border-radius: 15px;
-    overflow: hidden;   
+    overflow: hidden;   /* Para que la imagen no se salga de las esquinas redondeadas */
     width: 280px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px); /* Efecto visual al pasar el mouse */
 }
 
 .tarjeta img {
     width: 100%;
     height: 200px;
-    object-fit: cover; 
+    object-fit: cover; /* Recorta la imagen para que todas midan lo mismo */
 }
 
 .info-tarjeta {
@@ -204,12 +182,12 @@ h2 {
 .precio {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #d32f2f; 
+    color: #d32f2f; /* Rojo para el precio */
     margin: 15px 0;
 }
 
 .boton-anadir {
-    background-color: #27ae60; 
+    background-color: #27ae60; /* Verde "Comprar" */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -222,7 +200,3 @@ h2 {
 .boton-anadir:hover {
     background-color: #1e8449;
 }
-
-
-
-
